@@ -1,0 +1,22 @@
+<!-- HelloWorld.ui.xml -->
+
+<ui:UiBinder xmlns:ui='urn:ui:com.google.gwt.uibinder'
+    xmlns:g='urn:import:com.google.gwt.user.client.ui'>
+  
+  <ui:style type="com.jedfonner.examples.client.HelloWorld.UiStyle">
+	  .pretty { background-color: SkyBlue; }
+	  .ugly { background-color: Grey; }
+  </ui:style>
+  
+  <ui:style field="otherStyle" src="MyUiOtherStyle.css" />
+  
+  <ui:style field="thirdOtherStyle" >
+    .pretty { background-color: Orange; }
+  </ui:style>
+  
+  <g:HTMLPanel>
+    <div class="{thirdOtherStyle.pretty}">
+      <span class="{style.pretty}">Hello</span>, I want to <span class="{otherStyle.pretty}">rock</span> your <span ui:field='nameSpan'/>.
+    </div>
+  </g:HTMLPanel>
+</ui:UiBinder>
